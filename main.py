@@ -1,9 +1,8 @@
-from pedestrianCrossing import PedestrianCrossing
-from Traffic_Light import TrafficLight
+import time
+from Stopwatch import *
 
-if __name__ == "__main__":
-    crossing = PedestrianCrossing()
-    crossing.run()
+time.sleep(0.1) # Wait for USB to become ready
 
-    traffic_light = TrafficLight()
-    traffic_light.run()
+print("Hello, Pi Pico!")
+s = StopWatch()
+s.run()
