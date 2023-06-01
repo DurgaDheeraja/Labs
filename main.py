@@ -1,8 +1,10 @@
 import time
-from Stopwatch import *
+from RoomController import *
 
 time.sleep(0.1) # Wait for USB to become ready
 
 print("Hello, Pi Pico!")
-s = StopWatch()
-s.run()
+myroom = RoomController()
+
+myroom.run()
+
