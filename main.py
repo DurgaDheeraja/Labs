@@ -1,10 +1,16 @@
-import time
-from RoomController import *
+from pedestrianCrossing import PedestrianCrossing
+from TrafficLightController import Light
+from vehicle import VehicleDetectionHandler
 
-time.sleep(0.1) # Wait for USB to become ready
+if __name__ == "__main__":
+    crossing = PedestrianCrossing()
+    crossing.run()
 
-print("Hello, Pi Pico!")
-myroom = RoomController()
+    traffic_light = TrafficLightController()
+    traffic_light.control_traffic_lights()
 
-myroom.run()
-
+    vehicle_handler = VehicleDetectionHandler()
+    # Call methods or perform actions related to the vehicle detection handler
+    # For example:
+    # vehicle_handler.detect_vehicle()
+    # vehicle_handler.perform_actions()
